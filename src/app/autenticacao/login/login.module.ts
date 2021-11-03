@@ -15,10 +15,12 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginComponent, LogarComponent } from './components';
 
 @NgModule({
+
   declarations: [
     LoginComponent,
     LogarComponent
   ],
+
   imports: [
     CommonModule,
     RouterModule,
@@ -28,7 +30,8 @@ import { LoginComponent, LogarComponent } from './components';
     MatTooltipModule,
     MatIconModule,
     MatSnackBarModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ReactiveFormsModule
   ]
 })
 

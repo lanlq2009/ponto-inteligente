@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+import { Login } from '../../models';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
 
-   //!: - indica ao type script que o construtor não será nulo
    form!: FormGroup;
 
   constructor(
@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
          this.snackBar.open("Dados inválidos", "Erro", {duration: 5000});
        return;
      }
-     alert(JSON.stringify(this.form.invalid));
+     alert(JSON.stringify(this.form.value));
   } 
   
   
