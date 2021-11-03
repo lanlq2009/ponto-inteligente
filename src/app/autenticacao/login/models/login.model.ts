@@ -1,8 +1,8 @@
 export class Login {
 
     constructor(
-        private email: string,
-        private login: string
+        public email: string,
+        public senha: string
     ){}
 
 
