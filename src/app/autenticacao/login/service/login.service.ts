@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { environment as env } from '../../../../environments/environment';
+import { Login } from '../';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor() { }
+  private readonly PATH: string = 'auth'; //URI no qual vai fazer o login na api
+
+  constructor(private httpClient: HttpClient) {
+
+   }
+
+   logar(login: Login): Observable<any>{
+     return this.httpClient.post(env.baseUrl+this.PATH, login);
+   }
 }
