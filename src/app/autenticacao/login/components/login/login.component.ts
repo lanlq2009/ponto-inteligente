@@ -7,7 +7,7 @@ import { Login } from '../../models';
 import { LoginService } from '../../service';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-login-pf',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
                */
               console.log(JSON.stringify(usuarioData));
               if(usuarioData['role'] == 'ROLE_ADMIN') {
-                alert('Deve redirecionar para a página de admin');
+                  alert('Deve redirecionar para a página de admin');
                  //this.router.navigate(['/admin']);
                } else {
           	     alert('Deve redirecionar para a página de funcionário');
