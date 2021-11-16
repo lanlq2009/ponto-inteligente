@@ -10,6 +10,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SharedModule } from '../../shared/shared.module';
  
 import { CadastrarPjComponent, 
          CadastroPjComponent } from './components';
@@ -32,7 +33,8 @@ import { CadastrarPjComponent,
     MatListModule,
     MatTooltipModule,
     MatIconModule,
-    MatSnackBarModule 
+    MatSnackBarModule,
+    SharedModule 
   ]
 
 })
